@@ -19,8 +19,7 @@ INNOVATIVE FEATURE:- This app can also understand hinglish words( these are the 
  5) Maximum emoji's used
  6) Most busy user among us.
  
- Link:- 
- 
+ Link:- http://localhost:8501/
  
  
  MY SOLUTION AND INSIGHTS IS SHOWN FROM THE PICTURES BELOW:
