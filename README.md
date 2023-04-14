@@ -24,7 +24,9 @@ INNOVATIVE FEATURE:- This app can also understand hinglish words( these are the 
  
  MY SOLUTION AND INSIGHTS IS SHOWN FROM THE PICTURES BELOW:
  
+UI LOOKS LIKE THIS:-
 
+![Screenshot (5534)](https://user-images.githubusercontent.com/80636537/232007781-80efe4b5-3e1c-4547-a3d9-07cde91cdd14.png)
 
 
 
