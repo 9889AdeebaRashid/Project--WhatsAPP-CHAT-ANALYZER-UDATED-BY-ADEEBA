@@ -22,9 +22,9 @@ selected_user = st.sidebar.selectbox("Show analysis wrt",user_list)
 
 if st.sidebar.button("Show Analysis"):
     # stats area
-    num_messages, words, num_media_messages, num_links = helper.fetch_stats(selected_user,df)
+    num_messages, words, num_media_messages, num_links,num_totaltime = helper.fetch_stats(selected_user,df)
     st.title("Top Statistics")
-    col1, col2, col3, col4 = st.columns(4)
+    col1, col2, col3, col4,col5 = st.columns(5)
 
 
     with col1:
@@ -39,6 +39,9 @@ if st.sidebar.button("Show Analysis"):
     with col4:
         st.header("Links Shared")
         st.title(num_links)
+    with col5:
+        st.header("Total Time Spent")
+        st.title(num_totaltime)
 
     # monthly timeline
     st.title("Monthly Timeline")
@@ -53,6 +56,14 @@ if st.sidebar.button("Show Analysis"):
     daily_timeline = helper.daily_timeline(selected_user, df)
     fig, ax = plt.subplots()
     ax.plot(daily_timeline['only_date'], daily_timeline['message'], color='red')
+    plt.xticks(rotation='vertical')
+    st.pyplot(fig)
+
+    #weekly timeline
+    st.title("Weekly Timeline")
+    weekly_timeline = helper.weekly_timeline(selected_user, df)
+    fig, ax = plt.subplots()
+    ax.plot(weekly_timeline['only_date'], daily_timeline['message'], color='blue')
     plt.xticks(rotation='vertical')
     st.pyplot(fig)
 
